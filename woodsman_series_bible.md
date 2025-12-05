@@ -30,7 +30,7 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
 **Year One (2021-2022):**
 - Dean leaves military service (E-9, Green Beret)
 - Purchases 160 acres of remote Montana wilderness for $20,000
-- Drives old diesel truck (1989 Ford F-250) to the property
+- Drives old gas-powered truck (1989 Ford F-250 with straight-six engine and manual transmission) to the property
 - Initial gear: canvas wall tent, basic hand tools, .308 hunting rifle (Remington 700), portable anvil
 - Hunts deer and elk for meat and hides
 - Builds yurt from animal hides for winter shelter
@@ -365,7 +365,7 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
 
 *Year One - Chapter 1:*
 - **Chapter 1:** Dean leaves military, buys wilderness property
-  - Drives old diesel truck to remote Montana land
+  - Drives old gas-powered truck (manual transmission) to remote Montana land
   - Initial gear: wall tent, basic tools, .308 hunting rifle, portable anvil
   - Hunts deer and elk for food and hides
   - Builds yurt from animal hides for winter shelter

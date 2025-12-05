@@ -1,6 +1,6 @@
 # Chapter 1: Year One
 
-The diesel engine coughed, sputtered, then roared back to life. Dean Jacobs pumped the accelerator of the '89 Ford F-250, watching black smoke belch from the exhaust in the rearview mirror. The truck was a beast—rusted out in places, primer gray in others, but the straight-six engine ran like the day it rolled off the assembly line. Some things just refused to die.
+The gas engine coughed, sputtered, then roared back to life. Dean Jacobs pumped the accelerator of the '89 Ford F-250, the manual transmission still in neutral as he coaxed the straight-six awake. The truck was a beast—rusted out in places, primer gray in others, but the engine ran like the day it rolled off the assembly line. Push-start capable if needed. Some things just refused to die.
 
 He knew the feeling.
 
