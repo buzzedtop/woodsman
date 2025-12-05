@@ -50,7 +50,7 @@ With water handled, Dean turned his attention to power.
 
 The micro-turbine had been another winter project in his mind. He'd sketched designs, calculated flow rates, estimated power output. The creek had enough flow and drop to generate electricity—not much, maybe enough to charge a battery bank and run LED lights, but that was enough.
 
-Dean fabricated the turbine housing from an old propane tank he'd found half-buried near the property line—someone's trash from decades ago, now his resource. He cut it open, cleaned it out, and shaped it into a housing for the turbine wheel.
+Dean fabricated the turbine housing from an old steel tank he'd found half-buried near the property line—someone's trash from decades ago, now his resource. The rusted cylinder had probably been a propane tank once, but now it was just scrap metal. He cut it open, cleaned it out, and shaped it into a housing for the turbine wheel.
 
 The wheel itself was the tricky part. He needed something that would spin efficiently in the creek's flow, capturing as much energy as possible. Dean carved the blades from hardwood, shaped like airplane propellers, and mounted them on a steel shaft he'd forged and machined by hand with files.
 
