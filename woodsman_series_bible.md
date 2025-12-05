@@ -25,19 +25,54 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
 - Experiences severe trauma that drives him to seek isolation
 - Retires as E-9 (Master Sergeant/Sergeant Major) in 2021
 
-**2021-2025:** The Isolation Years
-- Dean purchases maximum untouched land ~100 miles from Missoula, Montana (pop. ~75,000)
-- Builds hand-crafted log home with stone foundation pillars
-- Achieves 100% self-sufficiency:
-  - Hand-mills all lumber for house construction
-  - Small river with ram pump (water pressure) and water turbine (electricity)
+**2021-2025:** The Homesteading Years
+
+**Year One (2021-2022):**
+- Dean leaves military service (E-9, Green Beret)
+- Purchases 160 acres of remote Montana wilderness for $20,000
+- Drives old diesel truck (1989 Ford F-250) to the property
+- Initial gear: canvas wall tent, basic hand tools, .308 hunting rifle (Remington 700), portable anvil
+- Hunts deer and elk for meat and hides
+- Builds yurt from animal hides for winter shelter
+- Constructs basic forge from river rocks and Montana clay
+- Produces charcoal from wood
+- Begins smelting iron from iron-rich red dirt (hematite)
+- Practices basic blacksmithing through winter
+- Cuts and stockpiles logs for future construction
+
+**Year Two (2022-2023):**
+- Spring: Builds stone pillar foundation for permanent house
+- Summer: Mills lumber by hand using sawpit method
+- Constructs log home with hand-milled lumber
+- Installs basic woodstove for heating/cooking
+- Late summer: Drives to town to purchase livestock trailer
+- Acquires initial livestock: chickens (Rhode Island Reds), goats (Nigerian Dwarfs), pigs (American Guinea Hogs)
+- Plants garlic and prepares garden plots
+- Builds animal shelters (chicken coop, goat shed, pig pen)
+
+**Year Three (2023-2024):**
+- Installs ram pump for running water from creek to cistern
+- Builds micro-turbine for electricity generation (powers LED lights and charges battery bank)
+- Expands garden to quarter acre
+- Plants small apple orchard (30 trees)
+- Livestock multiplies through breeding
+- Builds additional infrastructure: springhouse, workshop, barn, smokehouse
+- Harvests and preserves abundant food
+- Experiments with grain cultivation planning
+- Achieves near-complete self-sufficiency
+
+**Year Four (2024-2025):**
+- Complete self-sufficiency achieved:
+  - Hand-mills all lumber
+  - Ram pump provides water to house via cistern
+  - Micro-turbine generates electricity for battery bank
   - Creates iron from Montana's iron-rich red dirt/hematite deposits
-  - Produces charcoal from burning out logs
-  - Built forge using iron, charcoal, and motor oil
-  - Smithing capability to maintain farm equipment
+  - Produces charcoal from burning wood
+  - Smithing capability for tools and repairs
   - Starlink internet for outside contact
-  - HAM radio setup (similar to PRC-117, modified for civilian channels)
-  - Complete farming operation
+  - HAM radio setup (modified PRC-117 for civilian channels)
+  - Complete farming operation with livestock and gardens
+- September 2025: The apocalypse begins
 
 **2025: THE APOCALYPSE**
 
@@ -326,21 +361,58 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
 
 ### Story Structure
 
-**ACT I: THE END OF THE OLD WORLD**
+**CHAPTERS 1-3: THE HOMESTEADING YEARS (Pre-Apocalypse)**
 
-*Setup (Chapters 1-3):*
-- **Chapter 1:** Dean's daily life on homestead, establishing self-sufficiency
-  - Show his skills, his isolation, his peace
-  - Hint at trauma through reactions/thoughts
-  - Establish Starlink/HAM radio connection to world
-- **Chapter 2:** The world ends
-  - Dean watches nuclear war unfold via internet
-  - Sees reactors explode across US
-  - Witnesses retaliation and escalation
+*Year One - Chapter 1:*
+- **Chapter 1:** Dean leaves military, buys wilderness property
+  - Drives old diesel truck to remote Montana land
+  - Initial gear: wall tent, basic tools, .308 hunting rifle, portable anvil
+  - Hunts deer and elk for food and hides
+  - Builds yurt from animal hides for winter shelter
+  - Constructs forge from rocks and clay
+  - Makes charcoal, begins smelting iron from red dirt
+  - Practices blacksmithing through winter
+  - Cuts logs for future construction
+  - Establishes foundation of self-sufficiency
+
+*Year Two - Chapter 2:*
+- **Chapter 2:** Building permanence
+  - Spring: Constructs stone pillar foundation
+  - Summer: Hand-mills lumber using sawpit
+  - Builds log home with woodstove
+  - Late summer: Goes to town for trailer and livestock
+  - Acquires chickens, goats, and pigs
+  - Builds animal shelters
+  - Plants first gardens
+  - Transitions from survival to homesteading
+
+*Year Three - Chapter 3:*
+- **Chapter 3:** Developing the homestead
+  - Installs ram pump for running water
+  - Builds micro-turbine for electricity
+  - Expands garden significantly
+  - Plants apple orchard
+  - Livestock breeding and multiplication
+  - Builds additional structures (springhouse, workshop, barn, smokehouse)
+  - Achieves near-complete self-sufficiency
+  - Masters food preservation and storage
+
+*Year Four - Chapter 4:*
+- **Chapter 4:** The Last Good Year (The apocalypse begins)
+  - September 2025: Dean's daily life on fully operational homestead
+  - Show complete self-sufficiency achieved
+  - Forge work, livestock care, peaceful routine
+  - Establishes Starlink/HAM radio connection to world
+  - Nuclear war begins - watches civilization collapse
   - EMPs destroy Starlink
   - HAM radio captures emergency broadcasts
   - Dean's preparation and resignation
-- **Chapter 3:** Zero's intervention
+  - End of the peaceful years
+
+**ACT I: THE END OF THE OLD WORLD**
+
+*The Apocalypse (Chapters 5-6):*
+- **Chapter 5:** Zero's intervention
   - Nanobot canister hits Dean
   - Near-death experience
   - Zero appears, saves him
@@ -350,19 +422,18 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
   - Global broadcast: "Welcome to the wider universe!"
   - System interface appears
   - Dean's confusion and growing horror
-
-**ACT II: LEARNING THE GAME**
-
-*First Trials (Chapters 4-7):*
-- **Chapter 4:** First demon encounter - the earthworm
+- **Chapter 6:** First demon encounter
   - Evening, Dean outside checking property
-  - Worm emerges, attacks
-  - Fight with only an axe
+  - Demonic earthworm emerges
+  - Fight with axe and rifle
   - Mucus burns him alive
   - System notification: First ability unlocked - Regeneration (Passive)
   - Painful healing process
   - Realization of what the system means
-- **Chapter 5:** Understanding the cost
+
+**ACT II: LEARNING THE GAME**
+*First Trials (Chapters 7-10):*
+- **Chapter 7:** Understanding the cost
   - Dean experiments with system
   - Discovers radiation = experience = pain
   - Tries to avoid it, but demons force engagement
@@ -370,13 +441,13 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
   - Suffering through radiation poisoning
   - Level up
   - Realizes the trap: need power to survive, but power costs agony
-- **Chapter 6:** Demons everywhere
+- **Chapter 8:** Demons everywhere
   - Homestead under constant demon pressure
   - "Common as rabbits"
   - Dean develops survival tactics
   - Creates demon-proof defenses
   - Realizes he can't stay isolated forever
-- **Chapter 7:** The guilt sets in
+- **Chapter 9:** The guilt sets in
   - Dean reflects on Zero's message: "your new paradise"
   - Realizes his sarcasm caused this
   - Thinks about all the civilians suffering
@@ -386,20 +457,20 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
 
 **ACT III: INTO THE WASTELAND**
 
-*The Journey (Chapters 8-15):*
-- **Chapter 8:** Leaving home
+*The Journey (Chapters 10-17):*
+- **Chapter 10:** Leaving home
   - Dean prepares for expedition toward Missoula
   - Gathers supplies, weapons
   - Last look at his sanctuary
   - Heads into demon-infested wilderness
-- **Chapter 9-12:** Journey to Missoula
+- **Chapter 11-14:** Journey to Missoula
   - Various demon encounters
   - Forced radiation exposure and leveling
   - Discovery of how bad things are
   - First encounters with other survivors (corpses, near-deaths, hostiles)
   - Witnesses human cruelty
   - First rescue: [TO BE DETERMINED - who does he save first?]
-- **Chapter 13-15:** Missoula ruins
+- **Chapter 15-17:** Missoula ruins
   - City is nightmare landscape
   - Demon nests
   - Warlord territories
@@ -410,20 +481,20 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
 
 **ACT IV: THE PROTECTOR**
 
-*Building the Community (Chapters 16-20):*
-- **Chapter 16-18:** The rescues
+*Building the Community (Chapters 18-22):*
+- **Chapter 18-20:** The rescues
   - Dean fights through demons and humans
   - Saves survivors
   - Begins gathering people
   - Shows tactical leadership
   - Suffers greatly but perseveres
   - [KEY CHARACTERS TO BE INTRODUCED - who are the survivors?]
-- **Chapter 19:** Finding sanctuary
+- **Chapter 21:** Finding sanctuary
   - Discovery of defensible location
   - [TO BE DETERMINED - where? Bunker? Fortified building? Natural formation?]
   - Begins establishing safe zone
   - Community starts to form
-- **Chapter 20:** The choice to stay
+- **Chapter 22:** The choice to stay
   - Dean realizes these people need him
   - Can't abandon them
   - Accepts role as protector
