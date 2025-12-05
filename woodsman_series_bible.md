@@ -30,7 +30,7 @@ Now Dean and all of humanity must suffer radiation poisoning to gain power, figh
 **Year One (2021-2022):**
 - Dean leaves military service (E-9, Green Beret)
 - Purchases 160 acres of remote Montana wilderness for $20,000
-- Drives old gas-powered truck (1989 Ford F-250 with straight-six engine and manual transmission) to the property
+- Drives old gas-powered truck (1989 Ford F-250 with straight-six engine and manual transmission) to the property; always parks on hills for push-start capability if battery dies
 - Initial gear: canvas wall tent, basic hand tools, .308 hunting rifle (Remington 700), portable anvil
 - Hunts deer and elk for meat and hides
 - Builds yurt from animal hides for winter shelter
