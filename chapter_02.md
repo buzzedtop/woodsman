@@ -74,7 +74,7 @@ But a house wasn't a homestead. Not yet.
 
 ---
 
-Late August, Dean made the trip to town. The old diesel truck coughed to life after sitting unused for months, and he drove the two-track road back to civilization—or what passed for it.
+Late August, Dean made the trip to town. The old gas-powered truck coughed to life after sitting unused for months, and he drove the two-track road back to civilization—or what passed for it.
 
 Ovando was barely a town. Population seventy on a good day, consisting of a general store, a bar, a trading post, and a scattering of houses. But it had what Dean needed: a community board where people posted things for sale.
 

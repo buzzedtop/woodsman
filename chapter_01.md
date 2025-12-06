@@ -1,6 +1,6 @@
 # Chapter 1: Year One
 
-The diesel engine coughed, sputtered, then roared back to life. Dean Jacobs pumped the accelerator of the '89 Ford F-250, watching black smoke belch from the exhaust in the rearview mirror. The truck was a beast—rusted out in places, primer gray in others, but the straight-six engine ran like the day it rolled off the assembly line. Some things just refused to die.
+The gas engine coughed, sputtered, then roared back to life. Dean Jacobs pumped the accelerator of the '89 Ford F-250, the manual transmission still in neutral as he coaxed the straight-six awake. The truck was a beast—rusted out in places, primer gray in others, but the engine ran like the day it rolled off the assembly line. Push-start capable if needed. Some things just refused to die.
 
 He knew the feeling.
 
@@ -24,7 +24,7 @@ So he'd taken his retirement pay, his VA disability check, and bought the most r
 
 Dean wanted it.
 
-The trees opened up ahead, and he eased the truck into what passed for a clearing. The property. His property. He killed the engine and sat for a moment, taking it in.
+The trees opened up ahead, and he eased the truck into what passed for a clearing. The property. His property. He positioned the truck on a slight incline—nose downhill, always—before killing the engine. A dead battery meant a push-start with the manual transmission. Habit from years of operating in places where help wasn't coming. He sat for a moment, taking it in.
 
 A river—more of a creek, really—cut through the northern edge, rushing over rocks with that constant white noise that would either drive a man crazy or keep him sane. Dean was betting on the latter. The land rose gently to the south, covered in pine and Douglas fir, with granite ridges jutting up like broken teeth. To the east, a small valley spread out, maybe five acres of relatively flat ground covered in grass and wildflowers.
 
