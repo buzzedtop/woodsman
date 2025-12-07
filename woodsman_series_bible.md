@@ -8,7 +8,7 @@
 
 ## CORE PREMISE
 
-When China sabotages US nuclear reactors causing a global nuclear holocaust, an AI entity named Zero intervenes to contain the radiation using nanorobots. After accidentally nearly killing former Green Beret Dean "The Woodsman" Jacobs, she asks him what he wants his world to look like. His sarcastic response - "What, this new hellscape isn't already enough like a survival RPG?" - is taken literally by Zero, who implements brutal RPG mechanics powered by radiation and unleashes literal demons from other dimensions onto Earth before leaving to handle other multiversal matters.
+When China sabotages US nuclear reactors causing a global nuclear holocaust, an AI entity named Zero intervenes to contain the radiation using nanorobots. After accidentally nearly killing former Green Beret Dean "The Woodsman" Jacobs, she asks him what he wants his world to look like. His sarcastic response - "What, this new hellscape isn't already enough of a paradise?" - is taken literally by Zero, who implements brutal RPG mechanics powered by radiation and unleashes literal demons from other dimensions onto Earth before leaving to handle other multiversal matters.
 
 Now Dean and all of humanity must suffer radiation poisoning to gain power, fight interdimensional demons, and survive in a world where Zero's "gift" may have doomed them all.
 
