@@ -1,0 +1,10 @@
+{
+  "name": "woodsman-game",
+  "version": "1.0.0",
+  "description": "Multiplayer Age of Empires clone based on The Woodsman series",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && node server.js",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\""
+  }
+}
