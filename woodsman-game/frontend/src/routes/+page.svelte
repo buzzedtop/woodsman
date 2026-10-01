@@ -1,6 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import { io, Socket } from 'socket.io-client';
+  import { LocalGameEngine } from '$lib/LocalGameEngine';
 
   let canvas: HTMLCanvasElement;
   let ctx: CanvasRenderingContext2D;
@@ -30,27 +31,65 @@
   let width = 0;
   let height = 0;
 
-  onMount(() => {
-    width = window.innerWidth;
-    height = window.innerHeight;
-    canvas.width = width;
-    canvas.height = height;
-    ctx = canvas.getContext('2d')!;
+  let isOffline = false;
+  let localEngine: LocalGameEngine | null = null;
+  let connecting = true;
 
-    // Resize handler
-    const onResize = () => {
-      width = window.innerWidth;
-      height = window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
+  function initLocalEngine() {
+    isOffline = true;
+    connecting = false;
+    localEngine = new LocalGameEngine();
+
+    localEngine.onInit = (data) => {
+      myId = data.id;
+      state.players = data.players;
+      state.entities = data.entities;
+      baseZoneRadius = data.baseZoneRadius;
+      console.log('Local Engine Initialized with ID:', myId);
     };
-    window.addEventListener('resize', onResize);
 
-    // Socket connection
-    // Note: In dev mode, we connect to the backend running on 3000
-    // In prod, it connects to the same origin
+    localEngine.onAgeUpSuccess = (data) => {
+      ageUpCost = data.newCost;
+    };
+
+    localEngine.onStateUpdate = (data) => {
+      state.players = data.players;
+      state.entities = data.entities;
+    };
+
+    localEngine.start();
+  }
+
+  function connectSocket() {
+    connecting = true;
+    isOffline = false;
+    if (localEngine) {
+      localEngine.stop();
+      localEngine = null;
+    }
+
     const backendUrl = import.meta.env.DEV ? 'http://localhost:3000' : '/';
-    socket = io(backendUrl);
+    if (socket) {
+      socket.disconnect();
+    }
+
+    socket = io(backendUrl, {
+      timeout: 5000,
+      reconnectionAttempts: 2
+    });
+
+    socket.on('connect', () => {
+      connecting = false;
+      isOffline = false;
+      console.log('Connected to backend');
+    });
+
+    socket.on('connect_error', () => {
+      console.log('Connection failed, falling back to offline mode');
+      if (!isOffline) {
+        initLocalEngine();
+      }
+    });
 
     socket.on('init', (data) => {
       myId = data.id;
@@ -68,6 +107,29 @@
       state.players = data.players;
       state.entities = data.entities;
     });
+  }
+
+  function resetLocalState() {
+    if (localEngine) {
+      localEngine.reset();
+    }
+  }
+
+  onMount(() => {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
+    ctx = canvas.getContext('2d')!;
+
+    // Resize handler
+    const onResize = () => {
+      width = window.innerWidth;
+      height = window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+    };
+    window.addEventListener('resize', onResize);
 
     // Input handling
     const onKeyDown = (e: KeyboardEvent) => {
@@ -89,11 +151,14 @@
 
     const onKeyPress = (e: KeyboardEvent) => {
       if (e.key.toLowerCase() === 'e') {
-        socket.emit('interact');
+        if (isOffline && localEngine) localEngine.interact();
+        else socket?.emit('interact');
       } else if (e.key.toLowerCase() === 'q') {
-        socket.emit('ageUp');
+        if (isOffline && localEngine) localEngine.ageUp();
+        else socket?.emit('ageUp');
       } else if (e.key.toLowerCase() === 'b') {
-        socket.emit('build', { type: 'turret' });
+        if (isOffline && localEngine) localEngine.build({ type: 'turret' });
+        else socket?.emit('build', { type: 'turret' });
       }
     };
 
@@ -107,7 +172,11 @@
       if (keys.a) dx -= 1;
       if (keys.d) dx += 1;
 
-      socket.emit('input', { dx, dy });
+      if (isOffline && localEngine) {
+        localEngine.input({ dx, dy });
+      } else if (socket) {
+        socket.emit('input', { dx, dy });
+      }
     };
 
     // Render loop
@@ -303,6 +372,7 @@
       animationFrameId = requestAnimationFrame(render);
     };
 
+    connectSocket();
     render();
 
     return () => {
@@ -311,10 +381,19 @@
       window.removeEventListener('keydown', onKeyDown);
       window.removeEventListener('keyup', onKeyUp);
       window.removeEventListener('keypress', onKeyPress);
-      socket.disconnect();
+      if (socket) socket.disconnect();
+      if (localEngine) localEngine.stop();
     };
   });
 </script>
+
+{#if isOffline}
+  <div class="offline-banner">
+    <span>Offline Mode</span>
+    <button onclick={connectSocket}>Reconnect</button>
+    <button onclick={resetLocalState} class="danger">Reset Local Instance</button>
+  </div>
+{/if}
 
 <canvas bind:this={canvas}></canvas>
 
@@ -323,5 +402,43 @@
     display: block;
     width: 100vw;
     height: 100vh;
+  }
+
+  .offline-banner {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(255, 85, 85, 0.9);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: monospace;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .offline-banner button {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+
+  .offline-banner button:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .offline-banner button.danger {
+    background: rgba(139, 0, 0, 0.5);
+    border-color: #ffcccc;
+  }
+
+  .offline-banner button.danger:hover {
+    background: rgba(139, 0, 0, 0.8);
   }
 </style>
