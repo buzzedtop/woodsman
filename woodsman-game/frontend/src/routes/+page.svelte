@@ -115,6 +115,40 @@
     }
   }
 
+  const sendInput = () => {
+    let dx = 0;
+    let dy = 0;
+    if (keys.w) dy -= 1;
+    if (keys.s) dy += 1;
+    if (keys.a) dx -= 1;
+    if (keys.d) dx += 1;
+
+    if (isOffline && localEngine) {
+      localEngine.input({ dx, dy });
+    } else if (socket) {
+      socket.emit('input', { dx, dy });
+    }
+  };
+
+  const performAction = (actionType: string) => {
+    if (actionType === 'interact') {
+      if (isOffline && localEngine) localEngine.interact();
+      else socket?.emit('interact');
+    } else if (actionType === 'ageUp') {
+      if (isOffline && localEngine) localEngine.ageUp();
+      else socket?.emit('ageUp');
+    } else if (actionType === 'build') {
+      if (isOffline && localEngine) localEngine.build({ type: 'turret' });
+      else socket?.emit('build', { type: 'turret' });
+    }
+  };
+
+  const handleMobileDir = (dir: 'w'|'a'|'s'|'d', state: boolean, e: Event) => {
+    e.preventDefault(); // Prevent double firing from touch + mouse
+    keys[dir] = state;
+    sendInput();
+  };
+
   onMount(() => {
     width = window.innerWidth;
     height = window.innerHeight;
@@ -151,33 +185,15 @@
 
     const onKeyPress = (e: KeyboardEvent) => {
       if (e.key.toLowerCase() === 'e') {
-        if (isOffline && localEngine) localEngine.interact();
-        else socket?.emit('interact');
+        performAction('interact');
       } else if (e.key.toLowerCase() === 'q') {
-        if (isOffline && localEngine) localEngine.ageUp();
-        else socket?.emit('ageUp');
+        performAction('ageUp');
       } else if (e.key.toLowerCase() === 'b') {
-        if (isOffline && localEngine) localEngine.build({ type: 'turret' });
-        else socket?.emit('build', { type: 'turret' });
+        performAction('build');
       }
     };
 
     window.addEventListener('keypress', onKeyPress);
-
-    const sendInput = () => {
-      let dx = 0;
-      let dy = 0;
-      if (keys.w) dy -= 1;
-      if (keys.s) dy += 1;
-      if (keys.a) dx -= 1;
-      if (keys.d) dx += 1;
-
-      if (isOffline && localEngine) {
-        localEngine.input({ dx, dy });
-      } else if (socket) {
-        socket.emit('input', { dx, dy });
-      }
-    };
 
     // Render loop
     let animationFrameId: number;
@@ -397,6 +413,48 @@
 
 <canvas bind:this={canvas}></canvas>
 
+<div class="mobile-controls">
+  <div class="d-pad">
+    <div class="d-pad-row">
+      <button
+        onmousedown={(e) => handleMobileDir('w', true, e)}
+        onmouseup={(e) => handleMobileDir('w', false, e)}
+        onmouseleave={(e) => handleMobileDir('w', false, e)}
+        ontouchstart={(e) => handleMobileDir('w', true, e)}
+        ontouchend={(e) => handleMobileDir('w', false, e)}
+        ontouchcancel={(e) => handleMobileDir('w', false, e)}>W</button>
+    </div>
+    <div class="d-pad-row">
+      <button
+        onmousedown={(e) => handleMobileDir('a', true, e)}
+        onmouseup={(e) => handleMobileDir('a', false, e)}
+        onmouseleave={(e) => handleMobileDir('a', false, e)}
+        ontouchstart={(e) => handleMobileDir('a', true, e)}
+        ontouchend={(e) => handleMobileDir('a', false, e)}
+        ontouchcancel={(e) => handleMobileDir('a', false, e)}>A</button>
+      <button
+        onmousedown={(e) => handleMobileDir('s', true, e)}
+        onmouseup={(e) => handleMobileDir('s', false, e)}
+        onmouseleave={(e) => handleMobileDir('s', false, e)}
+        ontouchstart={(e) => handleMobileDir('s', true, e)}
+        ontouchend={(e) => handleMobileDir('s', false, e)}
+        ontouchcancel={(e) => handleMobileDir('s', false, e)}>S</button>
+      <button
+        onmousedown={(e) => handleMobileDir('d', true, e)}
+        onmouseup={(e) => handleMobileDir('d', false, e)}
+        onmouseleave={(e) => handleMobileDir('d', false, e)}
+        ontouchstart={(e) => handleMobileDir('d', true, e)}
+        ontouchend={(e) => handleMobileDir('d', false, e)}
+        ontouchcancel={(e) => handleMobileDir('d', false, e)}>D</button>
+    </div>
+  </div>
+  <div class="action-buttons">
+    <button onclick={() => performAction('interact')} ontouchstart={(e) => { e.preventDefault(); performAction('interact'); }}>E (Gather)</button>
+    <button onclick={() => performAction('ageUp')} ontouchstart={(e) => { e.preventDefault(); performAction('ageUp'); }}>Q (Age Up)</button>
+    <button onclick={() => performAction('build')} ontouchstart={(e) => { e.preventDefault(); performAction('build'); }}>B (Build)</button>
+  </div>
+</div>
+
 <style>
   canvas {
     display: block;
@@ -440,5 +498,68 @@
 
   .offline-banner button.danger:hover {
     background: rgba(139, 0, 0, 0.8);
+  }
+
+  /* Mobile Controls */
+  .mobile-controls {
+    display: none; /* Hidden by default */
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    justify-content: space-between;
+    padding: 0 20px;
+    pointer-events: none; /* Let clicks pass through empty space */
+    z-index: 1000;
+  }
+
+  .mobile-controls .d-pad, .mobile-controls .action-buttons {
+    pointer-events: auto; /* Re-enable clicks for buttons */
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .mobile-controls .d-pad {
+    align-items: center;
+  }
+
+  .mobile-controls .d-pad-row {
+    display: flex;
+    gap: 10px;
+  }
+
+  .mobile-controls button {
+    background: rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    color: white;
+    font-weight: bold;
+    font-family: monospace;
+    border-radius: 50%; /* Make them circular */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none; /* Prevent text selection */
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .mobile-controls .action-buttons button {
+    border-radius: 8px; /* Action buttons more rectangular */
+    width: auto;
+    padding: 0 15px;
+    height: 50px;
+  }
+
+  .mobile-controls button:active {
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  @media (max-width: 768px), (pointer: coarse) {
+    .mobile-controls {
+      display: flex;
+    }
   }
 </style>
